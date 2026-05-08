@@ -1,0 +1,27 @@
+# Pinned package versions for SmolVLM-500M-Instruct + QLoRA fine-tuning
+# Tested on Kaggle's Tesla T4 GPU runtime (Python 3.10/3.11)
+#
+# These are the versions installed by the first cell of training.ipynb
+# and inference.ipynb. Pinned for reproducibility — newer transformers
+# (>=4.48) introduced a vmap-based masking_utils that crashes with
+# bitsandbytes 4-bit quantization for Idefics3.
+
+# Core training stack
+transformers==4.47.1
+peft==0.14.0
+bitsandbytes>=0.43,<0.45
+accelerate>=0.34,<0.36
+datasets>=2.20
+
+# Image handling
+pillow>=10.0
+
+# Notebook utilities
+tqdm>=4.66
+
+# Plotting (only used by the optional sample-viewer cell in training.ipynb)
+matplotlib>=3.7
+
+# torch is provided by the Kaggle GPU image (cu121, torch 2.1+).
+# If installing locally, add a CUDA-matched torch wheel, e.g.:
+#   pip install torch==2.1.2 --index-url https://download.pytorch.org/whl/cu121
