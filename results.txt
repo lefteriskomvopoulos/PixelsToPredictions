@@ -1,0 +1,29 @@
+Version 2
+0.61971
+
+Version 3
+0.74446
+
+Version 4
+0.64989
+
+Version 5
+0.75653
+
+Version 6
+0.78470
+
+Version 7
+0.76659
+
+Version 8 (TTA = False)
+0.80885
+
+Version 8 (TTA = True)
+0.81488
+
+Version 9 (TTA = True)
+0.80482
+
+Version 10 (TTA = True)
+0.84507
